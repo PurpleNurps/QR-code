@@ -1,8 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  background-color: hsl(212, 45%, 89%);
+}
 .container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 29%;
-text-align: center;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr 17% 20%;
+  grid-template-columns: 1fr;
+  background-color: white;
+  margin: 20% 5% 20% 5%;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@font-face {
+  font-family: headingOutfit;
+  src: url(/static/Outfit-Bold.ttf);
+}
+
+@font-face {
+  font-family: paragraphOutfit;
+  src: url(/static/Outfit-Regular.ttf);
+
+}
+
+.image,
+.heading,
+.paragraph {
+  height: 100%; /* Ensure the content takes up 100% of the row height */
+}
+
+.image {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+
+.heading {
+  font-family: headingOutfit;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.paragraph {
+  color: hsl(220, 15%, 55%);
+  font-family: paragraphOutfit;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 1rem;
 }
